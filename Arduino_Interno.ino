@@ -41,8 +41,8 @@ const int Moedl1        = 25;                               // model1
 const int Moedl2        = 26;                               // model2
 const int Moedl3        = 27;                               // model3
 const int Moedl4        = 28;                               // model4
-const int MotorLeft     = 230;                              // servo turn left
-const int MotorRight    = 231;                              // servo turn right
+const int MotorLeft     = 230;                              // servo virar para esquerda
+const int MotorRight    = 231;                              // servo virar para direita
 
 int Left_Tra_Value;
 int Center_Tra_Value;
