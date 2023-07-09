@@ -114,11 +114,11 @@ def pose_esitmation(frame, aruco_dict_type, matrix_coefficients, distortion_coef
                                 math.degrees(yaw_marker))
             cv2.putText(frame, str_attitude, (0, 150), font, 1, (0, 255, 0), 2, cv2.LINE_AA)
 	    #-- salva os valores de interesse
-            analogica01=100*tvec[0]
-            analogica02=100*tvec[1]
-            analogica03=math.degrees(yaw_marker)
+            coordenadaX=int(100*tvec[0])
+            coordenadaY=int(100*tvec[1])
+            angulo=int(math.degrees(yaw_marker))
             
-            url = f"http://{esp32_ip}/?analog1={analogica01}&analog2={analogica02}&analog3={analogica03}"
+            url = f"http://{esp32_ip}/?valor01={coordenadaX}&valor02={coordenadaY}&valor03={angulo}"
             # Enviar requisição GET para o servidor
             print(url)
             #response = pip._vendor.requests.get(url)
